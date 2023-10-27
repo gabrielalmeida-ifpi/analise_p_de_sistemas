@@ -29,9 +29,9 @@ class Disciplina {
 
 Professor --|> Pessoa
 Aluno --|> Pessoa
-Aluno --* Turma
-Professor --> Disciplina
-Disciplina --> Turma
+Aluno "1..*" --* "1" Turma 
+Professor "1..*" --> "1..*" Disciplina
+Disciplina "*" --> "*" Turma
 
 
 @enduml
