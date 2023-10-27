@@ -1,0 +1,37 @@
+@startuml Instituição
+
+class Pessoa {
+    nome: String
+    matricula: int
+}
+
+class Professor {
+    formacao: String
+    salario: Double
+    ElaboraProva(): void
+}
+
+class Aluno {
+    dataNascimento: Date
+    fazProva(): void
+}
+
+class Turma {
+    sigla: String
+    ano: int
+    adicionarAluno(): void
+}
+
+class Disciplina {
+    nome: String
+    cargaHoraria: int
+}
+
+Professor --|> Pessoa
+Aluno --|> Pessoa
+Aluno --* Turma
+Professor --> Disciplina
+Disciplina --> Turma
+
+
+@enduml
